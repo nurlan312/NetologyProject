@@ -1,5 +1,6 @@
 package org.nurlan;
 
+import jdk.jfr.Name;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.TelegramBotsApi;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
@@ -11,7 +12,8 @@ import java.io.IOException;
 
 public class MyTelegramBot extends TelegramLongPollingBot {
 
-    private static final String BOT_TOKEN = "$BOT_TOKEN";
+    @Name("$BOR_TOKEN")
+    private static final String BOT_TOKEN = "";
     private static final String BOT_USERNAME = "secondSecond_bot";
     private static final String URI = "https://api.nasa.gov/planetary/apod?api_key=VcFLMRZFSwkyYplpTX4Farqq5zQ9zXyApQo9OK65";
 
@@ -55,7 +57,7 @@ public class MyTelegramBot extends TelegramLongPollingBot {
 
     private void sendMassage(String messageText) {
         SendMessage message = new SendMessage();
-        message.setChatId("$CHAT_ID");
+        message.setChatId("");
         message.setText(messageText);
         try {
             execute(message);
