@@ -11,7 +11,7 @@ import java.io.IOException;
 
 public class MyTelegramBot extends TelegramLongPollingBot {
 
-    private static final String BOT_TOKEN = "5571519627:AAGMMjjzGJDlx5tlVck2rtbDAw05Qgk3OGw";
+    private static final String BOT_TOKEN = "";
     private static final String BOT_USERNAME = "secondSecond_bot";
     private static final String URI = "https://api.nasa.gov/planetary/apod?api_key=VcFLMRZFSwkyYplpTX4Farqq5zQ9zXyApQo9OK65";
 
@@ -55,7 +55,7 @@ public class MyTelegramBot extends TelegramLongPollingBot {
 
     private void sendMassage(String messageText) {
         SendMessage message = new SendMessage();
-        message.setChatId("494471365");
+        message.setChatId("");
         message.setText(messageText);
         try {
             execute(message);
